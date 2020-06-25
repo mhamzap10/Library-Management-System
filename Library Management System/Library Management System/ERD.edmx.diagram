@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="60ee18ff9e074327ba75c9fc2e72779f" Name="Diagram1">
+        <EntityTypeShape EntityType="library_management_systemModel.issued_books" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="library_management_systemModel.Issued_Books_Record" Width="1.5" PointX="8.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="library_management_systemModel.library_books" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="library_management_systemModel.Library_Member_Login" Width="1.5" PointX="6.375" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="library_management_systemModel.library_members" Width="1.5" PointX="2.375" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="library_management_systemModel.shelf" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="library_management_systemModel.FK__issued_bo__Book___5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="library_management_systemModel.FK__issued_bo__Membe__5CD6CB2B" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="library_management_systemModel.FK__Issued_Bo__Book___60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="library_management_systemModel.FK__Issued_Bo__Membe__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="library_management_systemModel.FK__library_b__shelv__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

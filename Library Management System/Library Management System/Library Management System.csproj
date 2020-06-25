@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6EA38F4-709C-48EA-816C-C9F7255ABA8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Library_Management_System</RootNamespace>
+    <AssemblyName>Library Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_member.Designer.cs">
+      <DependentUpon>add_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="ERD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="issued_books.cs">
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Issued_Books_Record.cs">
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="library_books.cs">
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="library_members.cs">
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Member_Login.cs">
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shelf.cs">
+      <DependentUpon>ERD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="show_members_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_members_admin.Designer.cs">
+      <DependentUpon>show_members_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_books_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_books_admin.Designer.cs">
+      <DependentUpon>show_books_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete_book_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_book_admin.Designer.cs">
+      <DependentUpon>delete_book_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_book_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_book_admin.Designer.cs">
+      <DependentUpon>add_book_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_dashboard.Designer.cs">
+      <DependentUpon>admin_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="issue_book_librarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issue_book_librarian.Designer.cs">
+      <DependentUpon>issue_book_librarian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_form.Designer.cs">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_dashboard.Designer.cs">
+      <DependentUpon>member_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member_Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_Login_Form.Designer.cs">
+      <DependentUpon>member_Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_Login_Form.Designer.cs">
+      <DependentUpon>admin_Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="return_book_librarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="return_book_librarian.Designer.cs">
+      <DependentUpon>return_book_librarian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_issued_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_issued_book.Designer.cs">
+      <DependentUpon>show_issued_book.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_member.resx">
+      <DependentUpon>add_member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_members_admin.resx">
+      <DependentUpon>show_members_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_books_admin.resx">
+      <DependentUpon>show_books_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_book_admin.resx">
+      <DependentUpon>delete_book_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_book_admin.resx">
+      <DependentUpon>add_book_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_dashboard.resx">
+      <DependentUpon>admin_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issue_book_librarian.resx">
+      <DependentUpon>issue_book_librarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_form.resx">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_dashboard.resx">
+      <DependentUpon>member_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_Login_Form.resx">
+      <DependentUpon>member_Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_Login_Form.resx">
+      <DependentUpon>admin_Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="return_book_librarian.resx">
+      <DependentUpon>return_book_librarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_issued_book.resx">
+      <DependentUpon>show_issued_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="ERD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ERD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ERD.edmx.diagram">
+      <DependentUpon>ERD.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Benefits-in-Integrating-Study-material-repository-and-Library-Management-System-in-school-management-Software-1-1024x673.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ERD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ERD.Context.cs</LastGenOutput>
+      <DependentUpon>ERD.edmx</DependentUpon>
+    </Content>
+    <Content Include="ERD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERD.edmx</DependentUpon>
+      <LastGenOutput>ERD.cs</LastGenOutput>
+    </Content>
+    <Content Include="images\avery-fisher-center-media-collaborative-room-copyright-sarah-mechling.jpg" />
+    <Content Include="images\Benefits-in-Integrating-Study-material-repository-and-Library-Management-System-in-school-management-Software-1-1024x673.jpg" />
+    <Content Include="images\bobst-LL1-09B-4.jpg" />
+    <Content Include="images\bookcase-books-bookshelves-270571.jpg" />
+    <Content Include="images\dlv-plugin-for-divi.jpg" />
+    <Content Include="images\dlv-plugin-for-divi1.jpg" />
+    <Content Include="images\library-hero.jpg" />
+    <Content Include="images\thi-business-and-education-background.jpg" />
+    <Content Include="images\thi-business-and-education-background1.jpg" />
+    <Content Include="images\twitter_corner_black.png" />
+    <Content Include="images\twitter_corner_blue.png" />
+    <None Include="Resources\unnamed2.png" />
+    <None Include="Resources\customers-512.png" />
+    <None Include="Resources\Actions-address-book-new-icon.png" />
+    <None Include="Resources\2585bf984d29347ef9acb44e2964c36d-books-pile-3d-icon.png" />
+    <None Include="Resources\5a93db12.png" />
+    <None Include="Resources\unnamed %281%293.png" />
+    <None Include="Resources\admin.jpg" />
+    <None Include="Resources\oficcial-512.png" />
+    <None Include="Resources\unnamed %282%29.png" />
+    <None Include="Resources\add-book-icon-add-book-icon-115533862144zvpqmitfr1.png" />
+    <None Include="Resources\add-book-icon-add-book-icon-115533862144zvpqmitfr.png" />
+    <None Include="Resources\dlv-plugin-for-divi - Copy1.jpg" />
+    <None Include="Resources\017_282_online_knowledge_education_book_database_learn_laptop-512.png" />
+    <None Include="Resources\Things-Book-icon.png" />
+    <None Include="Resources\2cfc93d7665f5d7728782700e50596e3.png" />
+    <None Include="Resources\48-485996_book-icon-new-1-issue-book-icon-png1.png" />
+    <None Include="Resources\48-485996_book-icon-new-1-issue-book-icon-png.png" />
+    <None Include="Resources\logout-icon.png" />
+    <None Include="Resources\dlv-plugin-for-divi - Copy.jpg" />
+    <None Include="Resources\unnamed %281%292.png" />
+    <None Include="Resources\unnamed %281%291.png" />
+    <None Include="Resources\unnamed %281%29.png" />
+    <None Include="Resources\unnamed %283%29.png" />
+    <None Include="Resources\user-login-icon-29.png" />
+    <None Include="Resources\unnamed1.png" />
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\iconfinder_Delete_27842.png" />
+    <None Include="Resources\lock-4529981_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

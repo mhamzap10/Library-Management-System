@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Library_Management_System.add_book_admin" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAcCAAgBCAAEDAgYgCACAQEQAAAHAAAQCIAAA=</HashCode>
+      <FileName>add_book_admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.add_member" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAUAICAAARAAAACAAQAKACAAAQAAAHAAAQCYAAA=</HashCode>
+      <FileName>add_member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.admin_dashboard" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAQAAAQAUCESABAAAKCAAAECAAAAAAAAAFAICACgAAA=</HashCode>
+      <FileName>admin_dashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.admin_Login_Form" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EDAAAAQCACAAEBAABATAAQECAAgAAAAEAAAIAQCAAAA=</HashCode>
+      <FileName>admin_Login_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Database" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.delete_book_admin" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAAQAACAgABBAAACAAQACAEg4AQQAAHAIAYCAAAA=</HashCode>
+      <FileName>delete_book_admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.library_management_systemEntities" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAAAAAAAAgAAAAECAIAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ERD.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.issued_books" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACABgAAAACBAAAAAAAAACAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>issued_books.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Issued_Books_Record" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAQAACAAgAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Issued_Books_Record.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.library_books" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAAAAAAAAAgAAAAACBAgAAAABAAABAAAAA=</HashCode>
+      <FileName>library_books.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Library_Member_Login" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Library_Member_Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.library_members" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAgAAASAAAAAAAAABBAABAAAAA=</HashCode>
+      <FileName>library_members.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.shelf" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAQAAgAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shelf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.issue_book_librarian" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARKAAQICQEgBAABQCAAQACCABACAiAAIAAAQAAAAA=</HashCode>
+      <FileName>issue_book_librarian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.main_form" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAGAAABAAACDAAAACAAAIAAAAADAAACAAAAA=</HashCode>
+      <FileName>main_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.member_dashboard" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAECAAA4AAAAAHAAAACAAAA=</HashCode>
+      <FileName>member_dashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Login_Form" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAUCACAAQBAABADAAQECAAgEEAAAAAAAAyAAAAA=</HashCode>
+      <FileName>member_Login_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Program" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.return_book_librarian" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAgQBCQEABACAACAAQACCCEACAAAAMAAAQAAAAA=</HashCode>
+      <FileName>return_book_librarian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.show_books_admin" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAQIAiQAABAEAQCAASACAAAgAAAAAHAAAYAAgAA=</HashCode>
+      <FileName>show_books_admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.show_issued_book" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAYACgAAFAAAACAAQACAAEIgAAAAEAAAQAACAA=</HashCode>
+      <FileName>show_issued_book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.show_members_admin" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAYAECAAABEAAACAAQACAAAAAAQAAPAAAQAABAg=</HashCode>
+      <FileName>show_members_admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAIAAABAIEQggFgAMBMAAEAVkgBAAICQAAAABABog=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library_Management_System.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

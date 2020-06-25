@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="library_management_systemModelStoreContainer" CdmEntityContainer="library_management_systemEntities">
+    <EntitySetMapping Name="issued_books">
+      <EntityTypeMapping TypeName="library_management_systemModel.issued_books">
+        <MappingFragment StoreEntitySet="issued_books">
+          <ScalarProperty Name="Member_id" ColumnName="Member_id" />
+          <ScalarProperty Name="Book_id" ColumnName="Book_id" />
+          <ScalarProperty Name="Issue_Date" ColumnName="Issue_Date" />
+          <ScalarProperty Name="Issue_Time" ColumnName="Issue_Time" />
+          <ScalarProperty Name="Return_Date" ColumnName="Return_Date" />
+          <ScalarProperty Name="Return_Time" ColumnName="Return_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Issued_Books_Record">
+      <EntityTypeMapping TypeName="library_management_systemModel.Issued_Books_Record">
+        <MappingFragment StoreEntitySet="Issued_Books_Record">
+          <ScalarProperty Name="Book_id" ColumnName="Book_id" />
+          <ScalarProperty Name="Member_id" ColumnName="Member_id" />
+          <ScalarProperty Name="Issued_Date" ColumnName="Issued_Date" />
+          <ScalarProperty Name="Issued_Time" ColumnName="Issued_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="library_books">
+      <EntityTypeMapping TypeName="library_management_systemModel.library_books">
+        <MappingFragment StoreEntitySet="library_books">
+          <ScalarProperty Name="isbn_no" ColumnName="isbn_no" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="book_publisher" ColumnName="book_publisher" />
+          <ScalarProperty Name="C_book_author" ColumnName="_book_author" />
+          <ScalarProperty Name="shelve_ID" ColumnName="shelve_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Library_Member_Login">
+      <EntityTypeMapping TypeName="library_management_systemModel.Library_Member_Login">
+        <MappingFragment StoreEntitySet="Library_Member_Login">
+          <ScalarProperty Name="login_ID" ColumnName="login_ID" />
+          <ScalarProperty Name="LM_username" ColumnName="LM_username" />
+          <ScalarProperty Name="LM_password" ColumnName="LM_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="library_members">
+      <EntityTypeMapping TypeName="library_management_systemModel.library_members">
+        <MappingFragment StoreEntitySet="library_members">
+          <ScalarProperty Name="LM_ID" ColumnName="LM_ID" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="enrolment_no___staff_no" ColumnName="enrolment_no / staff_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shelves">
+      <EntityTypeMapping TypeName="library_management_systemModel.shelf">
+        <MappingFragment StoreEntitySet="shelves">
+          <ScalarProperty Name="shelve_ID" ColumnName="shelve_ID" />
+          <ScalarProperty Name="shelve_subject" ColumnName="shelve_subject" />
+          <ScalarProperty Name="Shelve_no" ColumnName="Shelve_no" />
+          <ScalarProperty Name="almirah_no" ColumnName="almirah_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

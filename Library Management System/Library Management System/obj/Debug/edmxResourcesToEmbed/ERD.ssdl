@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="library_management_systemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="issued_books">
+    <Key>
+      <PropertyRef Name="Member_id" />
+      <PropertyRef Name="Book_id" />
+    </Key>
+    <Property Name="Member_id" Type="int" Nullable="false" />
+    <Property Name="Book_id" Type="int" Nullable="false" />
+    <Property Name="Issue_Date" Type="date" />
+    <Property Name="Issue_Time" Type="time" Precision="7" />
+    <Property Name="Return_Date" Type="date" />
+    <Property Name="Return_Time" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="Issued_Books_Record">
+    <Key>
+      <PropertyRef Name="Book_id" />
+    </Key>
+    <Property Name="Book_id" Type="int" Nullable="false" />
+    <Property Name="Member_id" Type="int" />
+    <Property Name="Issued_Date" Type="date" />
+    <Property Name="Issued_Time" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="library_books">
+    <Key>
+      <PropertyRef Name="isbn_no" />
+    </Key>
+    <Property Name="isbn_no" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="book_publisher" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="_book_author" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="shelve_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Library_Member_Login">
+    <Key>
+      <PropertyRef Name="login_ID" />
+    </Key>
+    <Property Name="login_ID" Type="int" Nullable="false" />
+    <Property Name="LM_username" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="LM_password" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="library_members">
+    <Key>
+      <PropertyRef Name="LM_ID" />
+    </Key>
+    <Property Name="LM_ID" Type="int" Nullable="false" />
+    <Property Name="full_name" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="department" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="designation" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="enrolment_no / staff_no" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="shelves">
+    <Key>
+      <PropertyRef Name="shelve_ID" />
+    </Key>
+    <Property Name="shelve_ID" Type="int" Nullable="false" />
+    <Property Name="shelve_subject" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Shelve_no" Type="int" Nullable="false" />
+    <Property Name="almirah_no" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__issued_bo__Book___5DCAEF64">
+    <End Role="library_books" Type="Self.library_books" Multiplicity="1" />
+    <End Role="issued_books" Type="Self.issued_books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="library_books">
+        <PropertyRef Name="isbn_no" />
+      </Principal>
+      <Dependent Role="issued_books">
+        <PropertyRef Name="Book_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Issued_Bo__Book___60A75C0F">
+    <End Role="library_books" Type="Self.library_books" Multiplicity="1" />
+    <End Role="Issued_Books_Record" Type="Self.Issued_Books_Record" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="library_books">
+        <PropertyRef Name="isbn_no" />
+      </Principal>
+      <Dependent Role="Issued_Books_Record">
+        <PropertyRef Name="Book_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__issued_bo__Membe__5CD6CB2B">
+    <End Role="library_members" Type="Self.library_members" Multiplicity="1" />
+    <End Role="issued_books" Type="Self.issued_books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="library_members">
+        <PropertyRef Name="LM_ID" />
+      </Principal>
+      <Dependent Role="issued_books">
+        <PropertyRef Name="Member_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Issued_Bo__Membe__619B8048">
+    <End Role="library_members" Type="Self.library_members" Multiplicity="0..1" />
+    <End Role="Issued_Books_Record" Type="Self.Issued_Books_Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="library_members">
+        <PropertyRef Name="LM_ID" />
+      </Principal>
+      <Dependent Role="Issued_Books_Record">
+        <PropertyRef Name="Member_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__library_b__shelv__412EB0B6">
+    <End Role="shelves" Type="Self.shelves" Multiplicity="1" />
+    <End Role="library_books" Type="Self.library_books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="shelves">
+        <PropertyRef Name="shelve_ID" />
+      </Principal>
+      <Dependent Role="library_books">
+        <PropertyRef Name="shelve_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="library_management_systemModelStoreContainer">
+    <EntitySet Name="issued_books" EntityType="Self.issued_books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Issued_Books_Record" EntityType="Self.Issued_Books_Record" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="library_books" EntityType="Self.library_books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Library_Member_Login" EntityType="Self.Library_Member_Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="library_members" EntityType="Self.library_members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="shelves" EntityType="Self.shelves" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__issued_bo__Book___5DCAEF64" Association="Self.FK__issued_bo__Book___5DCAEF64">
+      <End Role="library_books" EntitySet="library_books" />
+      <End Role="issued_books" EntitySet="issued_books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Issued_Bo__Book___60A75C0F" Association="Self.FK__Issued_Bo__Book___60A75C0F">
+      <End Role="library_books" EntitySet="library_books" />
+      <End Role="Issued_Books_Record" EntitySet="Issued_Books_Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__issued_bo__Membe__5CD6CB2B" Association="Self.FK__issued_bo__Membe__5CD6CB2B">
+      <End Role="library_members" EntitySet="library_members" />
+      <End Role="issued_books" EntitySet="issued_books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Issued_Bo__Membe__619B8048" Association="Self.FK__Issued_Bo__Membe__619B8048">
+      <End Role="library_members" EntitySet="library_members" />
+      <End Role="Issued_Books_Record" EntitySet="Issued_Books_Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK__library_b__shelv__412EB0B6" Association="Self.FK__library_b__shelv__412EB0B6">
+      <End Role="shelves" EntitySet="shelves" />
+      <End Role="library_books" EntitySet="library_books" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
